@@ -21,9 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{968b5aa8-cfb5-4c87-a7b8-8e5afae6215c}</ProjectGuid>
-    <RootNamespace>StateMachine</RootNamespace>
+    <ProjectGuid>{acb6f6a9-bfa7-4d08-947d-308e35c204f8}</ProjectGuid>
+    <RootNamespace>IngenieriaSoftware</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>StateMachine</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -104,6 +105,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\pablo.granado\Documents\Fork\ProgrammingPatterns\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,11 +131,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Source\State.cpp" />
+    <ClCompile Include="Source\StateMachine.cpp" />
+    <ClCompile Include="Source\StateTransition.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="State.h" />
-    <ClInclude Include="StateFunctions.h" />
-    <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="Source\ListOfStates.h" />
+    <ClInclude Include="Source\State.h" />
+    <ClInclude Include="Source\StateMachineMacros.h" />
+    <ClInclude Include="Source\StateMachine.h" />
+    <ClInclude Include="Source\StateTransition.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
